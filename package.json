@@ -1,0 +1,41 @@
+{
+  "name": "turtlecoin-mempool-3d",
+  "version": "0.1.0",
+  "private": false,
+  "license": "GPL-3.0",
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "prettier": "node ./node_modules/prettier/bin-prettier.js '**/*.{ts,tsx,json,md}' --trailing-comma es5 --ignore-path .gitignore --single-quote --arrow-parens always --write",
+    "lint": "./node_modules/tslint/bin/tslint src/**/*.ts{,x}",
+    "lint-fix": "./node_modules/tslint/bin/tslint src/**/*.ts{,x} --fix"
+  },
+  "dependencies": {
+    "@types/node": "^10.7.1",
+    "@types/request": "^2.48.3",
+    "babylonjs": "^3.2.0",
+    "cannon": "^0.6.2",
+    "earcut": "^2.1.3",
+    "oimo": "^1.0.9",
+    "onchange": "^5.1.2",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "react-scripts-ts": "^3.1.0",
+    "typescript": "^3.7.3"
+  },
+  "lint-staged": {
+    "src/**/*.{ts}": [
+      "./node_modules/tslint/bin/tslint -c tslint.json --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prettier; lint-staged"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.statsBox {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+.keyBox {
+  position: absolute;
+  bottom: 0em;
+  right: 1em;
+  width: 20%;
+}
+
+.is-translucent {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.keyColor {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.white {
+  background-color: #F4F7BE;
+}
+
+.yellow {
+  background-color: #E5F77D;
+}
+
+.orange {
+  background-color: #DEBA6F;
+}
+
+.brown { 
+  background-color: #823038;
+}
+
+.purple { 
+  background-color: #1E000E;
+}
+
+.black { 
+  background-color: #1B1725;
+}
